@@ -1,0 +1,23 @@
+input CreatePostInput {
+    title: String
+    content: String
+}
+
+input UpdatePostInput {
+    title: String
+    content: String
+}
+
+type Post {
+    id: ID!
+    title: String
+    content: String
+}
+
+type Mutation {
+    CreatePost(request: CreatePostInput!): Post
+}
+
+type Query {
+    GetPost(id: ID!): Post
+}
